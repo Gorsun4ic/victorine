@@ -63,10 +63,6 @@ This will launch a local server, and you can view the application in your browse
 - slider.js - Base class for slider functionality.
 - victorine.js - Main class for handling quiz logic.
 
-## Contributing
-
-We welcome contributions to improve the Victorine Quiz Application! If you have suggestions or find bugs, please submit a pull request or open an issue. For detailed instructions on contributing, please refer to the [CONTRIBUTING.md]() file.
-
 ## License
 
 This project is licensed under the [GNU General Public License](LICENSE). See the LICENSE file for details.
