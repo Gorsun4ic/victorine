@@ -69,7 +69,7 @@ We welcome contributions to improve the Victorine Quiz Application! If you have 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). See the LICENSE file for details.
+This project is licensed under the [GNU General Public License](LICENSE). See the LICENSE file for details.
 
 ## Contact
 
