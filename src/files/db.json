@@ -1,41 +1,106 @@
 {
 	"test": {
-		"title": "Topography",
+		"title": "General Knowledge",
 		"questions": [
 			{
-				"name": "Рік хрещення Русі?",
+				"name": "What is the capital of France?",
 				"options": [
-					["988", true],
-					["1488", false],
-					["1878", false],
-					["534", false]
+					["Paris", true],
+					["London", false],
+					["Berlin", false],
+					["Madrid", false]
 				],
-				"explain": "Ага, в 988"
+				"explain": "The capital of France is Paris."
 			},
 			{
-				"name": "Бандера герой?",
+				"name": "What is 2 + 2?",
 				"options": [
-					["Так", true],
-					["Ні", false]
-				]
-			},
-			{
-				"name": "Скільки було майданів?",
-				"options": [
-					["1", false],
-					["2", true],
 					["3", false],
-					["4", false]
-				]
+					["4", true],
+					["5", false],
+					["6", false]
+				],
+				"explain": "2 + 2 equals 4."
 			},
 			{
-				"name": "Коли почалась війна?",
+				"name": "What color is the sky on a clear day?",
 				"options": [
-					["2022", false],
-					["2014", true],
-					["2013", false],
-					["2003", false]
-				]
+					["Blue", true],
+					["Green", false],
+					["Red", false],
+					["Yellow", false]
+				],
+				"explain": "The sky is blue on a clear day."
+			},
+			{
+				"name": "Which planet is known as the Red Planet?",
+				"options": [
+					["Mars", true],
+					["Earth", false],
+					["Venus", false],
+					["Jupiter", false]
+				],
+				"explain": "Mars is known as the Red Planet."
+			},
+			{
+				"name": "Who wrote 'To Kill a Mockingbird'?",
+				"options": [
+					["Harper Lee", true],
+					["Mark Twain", false],
+					["Ernest Hemingway", false],
+					["F. Scott Fitzgerald", false]
+				],
+				"explain": "'To Kill a Mockingbird' was written by Harper Lee."
+			},
+			{
+				"name": "What is the boiling point of water?",
+				"options": [
+					["100°C", true],
+					["90°C", false],
+					["110°C", false],
+					["120°C", false]
+				],
+				"explain": "The boiling point of water is 100°C."
+			},
+			{
+				"name": "What is the largest ocean on Earth?",
+				"options": [
+					["Pacific Ocean", true],
+					["Atlantic Ocean", false],
+					["Indian Ocean", false],
+					["Arctic Ocean", false]
+				],
+				"explain": "The largest ocean on Earth is the Pacific Ocean."
+			},
+			{
+				"name": "Which animal is known as the King of the Jungle?",
+				"options": [
+					["Lion", true],
+					["Tiger", false],
+					["Elephant", false],
+					["Giraffe", false]
+				],
+				"explain": "The lion is known as the King of the Jungle."
+			},
+			{
+				"name": "What is the chemical symbol for gold?",
+				"options": [
+					["Au", true],
+					["Ag", false],
+					["Pb", false],
+					["Fe", false]
+				],
+				"explain": "The chemical symbol for gold is Au."
+			},
+			{
+				"name": "In which year did the Titanic sink?",
+				"options": [
+					["1912", true],
+					["1905", false],
+					["1920", false],
+					["1898", false]
+				],
+				"explain": "The Titanic sank in 1912."
 			}
 		]
 	}

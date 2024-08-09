@@ -45,7 +45,7 @@ export default class Victorine extends Slider {
 			if (this.slider) {
 				this.setText(
 					this.slider,
-					"Sorry, but we can't connect to database. Try again!"
+					"Sorry, but we can't connect to the database. Try again!"
 				);
 			}
 		}
@@ -61,7 +61,7 @@ export default class Victorine extends Slider {
 
 	generateProgressHTML(progressMargin, progressText) {
 		return `
-				<p>Прогрес</p>
+				<p>Progress</p>
 				<div class="progress__bar">
 					<span style="margin-left: ${progressMargin}%">${progressText}%</span>
 					<div class="progress__success-bar" style="width: ${progressText}%;"></div>
@@ -72,7 +72,6 @@ export default class Victorine extends Slider {
 	// Function to show user in progression form how much questions he did answer
 	progressionBar() {
 		if (this.progressBar) {
-
 			// Margin and text is different cuz text should be on the progression side, not background
 			let progressMargin =
 				this.answeredQuestions === 0
@@ -100,14 +99,14 @@ export default class Victorine extends Slider {
 
 	// If question includes hint this function gonna show user hint if user had wrong answer
 	createHint(question, text) {
-		const hint = this.createElement("div", ["hint"], "Пояснення");
+		const hint = this.createElement("div", ["hint"], "Explain");
 
 		// If user didn't click this block gonna have text "Explain". If user click on that - default text gonna replace by right explanation
 		hint.addEventListener(
 			"click",
 			() => {
 				hint.classList.add("active");
-				hint.innerText = `Пояснення: ${text}`;
+				hint.innerText = `Explain: ${text}`;
 			},
 			{ once: true }
 		);
@@ -132,43 +131,43 @@ export default class Victorine extends Slider {
 
 	generateMarkHTML(percentage) {
 		return `
-      		<div class="mark__questions-number">
-      		    <span>${this.slide.length}</span>
-      		    <p>ЗАПИТАНЬ</p>
-      		</div>
-      		<div class="mark__summary">
-      		    <p>СУМА БАЛІВ</p>
-      		    <span>${this.correctAnswers} / ${this.slide.length}</span>
-      		</div>
-      		<div class="mark__result">
-      		    <p>РЕЗУЛЬТАТ</p>
-      		    <span>${percentage}%</span>
-      		</div>
-      		<div class="mark__precision">
-      		    <p>ТОЧНІСТЬ</p>
-      		    <div class="mark__precision-bar">
-      		        <span style="margin-left: ${
-										percentage === 0 ? 2 : percentage - 15
-									}%">${percentage}%</span>
-      		        <div class="mark__precision-success" style="width: ${percentage}%;"></div>
-      		    </div>
-      		</div>
-      		<div class="mark__correct">
-      		    <p>${this.correctAnswers} ПРАВИЛЬНИХ</p>
-      		</div> 
-      		<div class="mark__incorrect">
-      		    <p>${this.slide.length - this.correctAnswers} НЕПРАВИЛЬНИХ</p>
-      		</div>
-      		<div class="mark__global-time">
-      		    <p>ВСЬОГО ЧАСУ ${this.totalTime} СЕК</p>
-      		</div>
-      		<div class="mark__avarage-time">
-      		    <p>СР. ЧАС / ЗАПИТАННЯ ${this.totalTime / this.slide.length} СЕК</p>
-      		</div>
-      		<button class="mark__again">СПРОБУВАТИ ЩЕ РАЗ</button>
-					<div class="mark__answered-questions">
-						<h3>Ваші відповіді: </h3>
-					</div>
+			<div class="mark__questions-number">
+			    <span>${this.slide.length}</span>
+			    <p>QUESTIONS</p>
+			</div>
+			<div class="mark__summary">
+			    <p>SCORE</p>
+			    <span>${this.correctAnswers} / ${this.slide.length}</span>
+			</div>
+			<div class="mark__result">
+			    <p>RESULT</p>
+			    <span>${percentage}%</span>
+			</div>
+			<div class="mark__precision">
+			    <p>ACCURACY</p>
+			    <div class="mark__precision-bar">
+			        <span style="margin-left: ${
+								percentage === 0 ? 2 : percentage - 15
+							}%">${percentage}%</span>
+			        <div class="mark__precision-success" style="width: ${percentage}%;"></div>
+			    </div>
+			</div>
+			<div class="mark__correct">
+			    <p>${this.correctAnswers} CORRECT</p>
+			</div> 
+			<div class="mark__incorrect">
+			    <p>${this.slide.length - this.correctAnswers} INCORRECT</p>
+			</div>
+			<div class="mark__global-time">
+			    <p>TOTAL TIME ${this.totalTime} SEC</p>
+			</div>
+			<div class="mark__average-time">
+			    <p>AVG TIME / QUESTION ${this.totalTime / this.slide.length} SEC</p>
+			</div>
+			<button class="mark__again">TRY AGAIN</button>
+			<div class="mark__answered-questions">
+			    <h3>Your Answers: </h3>
+			</div>
 			`;
 	}
 
@@ -210,7 +209,7 @@ export default class Victorine extends Slider {
 				const tryAgainButton = this.createElement(
 					"button",
 					["mark__again"],
-					"Спробувати ще раз"
+					"Try again"
 				);
 				markAnsweredQuestions.appendChild(tryAgainButton);
 			}
@@ -276,7 +275,7 @@ export default class Victorine extends Slider {
 	handleOptionClick(e, isCorrect, questionBlock, i, item) {
 		if (!questionBlock.answered) {
 			questionBlock.answered = true;
-			this.answeredQuestions++; // Додаємо `answeredQuestions` при обробці кліку
+			this.answeredQuestions++;
 
 			this.updateAnswerCount(isCorrect);
 			this.updatePagination(i, isCorrect);
